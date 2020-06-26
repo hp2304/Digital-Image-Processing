@@ -9,7 +9,7 @@
 
 Here I am using [yalefaces dataset](http://cvc.cs.yale.edu/cvc/projects/yalefaces/yalefaces.html). It contains 165 grayscale images in GIF format of 15 individuals. There are 11 images per subject, one per different facial expression or configuration.
 
-After downloading dataset move some files to parent directory as I have done. These files will be used as evaluation metric (Test set). And remaining of them will be used as training set.
+After downloading dataset move some files to parent directory as I have done. These files will be used for evaluation (Test set). And remaining of them will be used as training set.
 
 ### Basic Idea
 * Read all training images and make matrix **A** of shape *mxn*. Where m is total number of pixels in input image and n is total number images in training set.
@@ -21,4 +21,4 @@ After downloading dataset move some files to parent directory as I have done. Th
 * Display image for which euclidean distance is minimum b.w. weights of test image and weights of train image (among many images).
 
 ## Usage
-* Run **my_pca.m**. First all 15 the eigenfaces will be displayed (I am taking **k=15**, you can change it in the code, also you have to change code for displaying k eigen faces). After that try any test image and it will display closest matched face.
+* Run **my_pca.m**. First, all 15 eigenfaces will be displayed (I am taking **k=15**, you can change it in the code. Also you have to change code for displaying the eigenfaces if you change k). After that try any test image and it will display closest matched face.
