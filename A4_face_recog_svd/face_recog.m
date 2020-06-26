@@ -46,7 +46,8 @@ A = mat.A;
 x = input('Enter image name (Enter 0 to exit) : ', 's');
 while ~strcmp(x,'0')
     %testname = strcat('dataset/', x);
-    testname = strcat('yalefaces/', x);
+    %testname = strcat('yalefaces/', x);
+    testname = x;
     test_img = imread(testname);
     %test_img = rgb2gray(test_img);
     test_img = imresize(test_img, 0.4);

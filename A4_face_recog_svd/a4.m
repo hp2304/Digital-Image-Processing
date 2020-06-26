@@ -25,6 +25,10 @@ for file = files'
 end
 
 A = double(A);
+A_copy = A;
+%data_mean = mean(A);
+%data_dev = std(A);
+% A = (A-data_mean)/data_dev;
 rank_A = rank(A);
 %[u,s,v] = my_svd(A);
 [u,s,v] = svd(A);
@@ -38,7 +42,9 @@ while ~strcmp(x,'0')
     %test_img = rgb2gray(test_img);
     test_img = imresize(test_img, 0.4);
     test_img = test_img(:);
+    test_img_copy = test_img;
     test_img = double(test_img);
+    %test_img = (test_img - mean(test_img))/std(test_img);
     test_coords = transpose(test_img)*u(:,1:k);
     %{
     mean_coords = sum(co_ords, 1);
@@ -59,10 +65,11 @@ while ~strcmp(x,'0')
     %if min_val < 5000
     figure;
     subplot(1,2,1)
-    subimage(uint8(reshape(test_img, [nrows,ncols])))
+    subimage(uint8(reshape(test_img_copy, [nrows,ncols])))
     title('Entered Image');
     subplot(1,2,2)
-    subimage(uint8(reshape(A(:, ind), [nrows,ncols])))
+    pred = uint8(reshape(A_copy(:, ind), [nrows,ncols]));
+    subimage(pred)
     title('Matched with this Image');
     waitforbuttonpress;
     close all;

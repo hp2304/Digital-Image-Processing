@@ -32,29 +32,24 @@ H_tran = H';
 transformed = H*img*transpose(H);
 imshow(uint8(transformed));
 
-%{
-Basis images
 
-val = (H(3,:))'*(H(3,:));
+%{
+% Basis images
+
+val = (H(4,:))'*(H(5,:));
 val = ((255/(max(max(val))-min(min(val)))).*val);
 imshow(uint8(val));
-
 %}
 
-%{
-Updating transformed matrix and then reconstruct original image
 
-for i=100:256
-    for j=100:256
-        transformed(i,j) = 0;
-    end
-end
-
+% Updating transformed matrix and then reconstruct original image
+transformed(20:150,20:150) = 0;
+    
 H_tran = H';
 reg = H_tran*transformed*H;
 subplot(1,2,1);
 imshow(uint8(img));
 subplot(1,2,2);
 imshow(uint8(reg));
-%}
+
 

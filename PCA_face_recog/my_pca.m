@@ -19,7 +19,9 @@ end
 
 me = me./(cnt-1);
 A = double(A);
+dev =  std(A, 0, 2);
 me_A = A - repmat(me, [1,(cnt-1)]);
+me_A = me_A ./ dev;
 C = (me_A'*me_A);
 [v,s] = eig(C);
 s=diag(flipud(diag(s)));
