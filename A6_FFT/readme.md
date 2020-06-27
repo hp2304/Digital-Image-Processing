@@ -34,7 +34,7 @@ foo@bar:~$ ./main
 * What I did? **Multithreading**, as one would guess.
 * One thing to note here is, 1D FFT of 1st row and 2nd row is independent, and this is true b.w. all pairs of rows. So now we can create a thread which will do just 1D FFT of one row, we can create such multiple threads to make it faster, where each thread will do FFT of different row.
 * But we need to synchronize these threads before we do transpose and conjugate operations. Remember all threads are operating on different rows *fft*(2D array) variable. So we need to wait till all the threads have done it's work. And then only we should proceed to perform transpose or conjugate operation, otherwise it will create chaos.
-* And this is like crazy fast. It took around just **<0.5** second on a **1024x1024 image (DFT and IDFT)** (My laptop has i7-7500U and 16GB RAM). This is signficantly faster than *naive* method shown in **DFT_C** assignment and that matrix multiplication method in **FT_matlab**.
+* And this is like crazy fast. It took around just **<2** seconds on a **1024x1024 image (DFT and IDFT)** (My laptop has i7-7500U and 16GB RAM). This is signficantly faster than *naive* method shown in **DFT_C** assignment and that matrix multiplication method in **FT_matlab**.
 * Well you can use any implementation either with multithreading or without multithreading. I have used multithreaded version in filtering part. 
 ---
 *Now let's move to filtering part.* So when we get FFT of image at 6th step, (Remember *low frequencies are at center and high frequencies are at corners of our fft matrix*)
