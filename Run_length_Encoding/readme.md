@@ -19,5 +19,5 @@ Decode will require filename of encodings, image height and image width as input
 
 ---
 ### Note
-* Though we don't need to provide image dimensions in decode (intuitive), but the way I am writing raw images in C, I need to specify it's dimensions. But there's always a workaround you can change it, if you like (being lazy). 
+* Though we don't need to provide image dimensions in decode (intuitive), but the way I am writing raw images in C, I need to specify it's dimensions. But there's always a workaround, you can change it, if you like (being lazy). 
 ---

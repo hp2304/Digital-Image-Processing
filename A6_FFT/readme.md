@@ -28,7 +28,7 @@ It will print the whole thing (hopefully it would be correct. Check in matlab or
 ## Make it more faster
 * Use implementation provided in *./FFT/Threaded*
 ```bash
-foo@bar:~$ gcc main.c -lm -lpthread
+foo@bar:~$ gcc main.c -lm -lpthread -o main
 foo@bar:~$ ./main
 ```
 * What I did? **Multithreading**, as one would guess.
@@ -41,13 +41,13 @@ foo@bar:~$ ./main
 * **Low pass:** *It lets the low frequency components pass and filters out high frequency component.* Imagine a circle with radius r, centered at center of our fft matrix. Make entries zero, which are outside the circle (Chopping off high frequency components). And now do IDFT to get filtered image back.
 ```bash
 foo@bar:~$ cd FFT/low_pass_filter
-foo@bar:~$ gcc main.c -o main
+foo@bar:~$ gcc main.c -lm -lpthread -o main
 foo@bar:~$ ./main
 ```
 * **High pass:** *It lets the high frequency components pass and filters out low frequency component.* Imagine a circle with radius r, centered at center of our fft matrix. Make entries zero, which are inside the circle (Chopping off low frequency components). And now do IDFT to get filtered image back.
 ```bash
 foo@bar:~$ cd FFT/high_pass_filter
-foo@bar:~$ gcc main.c -o main
+foo@bar:~$ gcc main.c -lm -lpthread -o main
 foo@bar:~$ ./main
 ```
 *In both of the above filters r is taken as input from user.* Note in high pass filter choose small value of r, since most images have large values of low frequency components.
