@@ -11,7 +11,7 @@ Here I am using [yalefaces dataset](http://cvc.cs.yale.edu/cvc/projects/yaleface
 
 After downloading dataset move some files to parent directory as I have done. These files will be used for evaluation (Test set). And remaining of them will be used as training set.
 
-### Basic Idea
+### Procedure
 * Read all training images and make matrix **A** of shape *mxn*. Where m is total number of pixels in input image and n is total number images in training set.
 * Do Singular Value Decomposition of matrix A  to get **U** matrix. Google about SVD if you don't know.
 * Select first *k* (tunable parameter) columns of matrix U to create our transformation matrix **T** (shape *mxk*).

@@ -8,7 +8,7 @@
 
 Check out *__svd_info.pdf__* to read about SVD and some intersting results of this excercise.
 
-### Basic Idea
+### Procedure
 * Read Image in matrix A (*mxn*).
 * Find U (*mxm*), S (*mxn*) and V (*nxn*) matrices by doing SVD of A.
 * Generate comressed image. (see eq. on slide *16* of *__DIP_ImageTransforms.pdf__* to know how to do that). In that slide r is tunable parameter, u_i and v_i is i-th column of matrix U and V respectively.

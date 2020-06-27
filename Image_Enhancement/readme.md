@@ -4,7 +4,7 @@ Do histogram equalization on input image.
 ## Requirements
 * Read about histogram equalization in **imageEnh.pdf**.
 
-## Basic Idea
+## Procedure
 * Image might be dark or overly bright. Input image may have histogram concentrated over very small region. Look at **baby_hist1.pdf**. Goal is to do some processing to make the histogram look like **baby_hist2.pdf** (More variation). I think this technique must be used in **HDR** mode we see in our mobile phones, to improve contrast.
 
 ## Usage
