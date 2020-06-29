@@ -6,7 +6,7 @@ Apply Butterworth Filter on image.
 * Introductory level knowledge of butterworth filters.
 
 ## Procedure and Usage
-* As in in procedure of **A6_FFT** get FFT of image. Replace each entry by equation given at [this link](https://www.geeksforgeeks.org/matlab-butterworth-lowpass-filter-in-image-processing/).
+* As in in procedure of **A6_FFT** get FFT of image. Replace each entry by equation given at slide 71 of **FreqDomFil.pdf** (Butterworth low pass filter).
 * Do Inverse DFT to get filtered image back.
 
 ```bash
@@ -16,6 +16,6 @@ foo@bar:~$ ./main
 
 Cut off frequency and order of butterworth filter will be taken as inputs. Here I have Implemented low pass butterworth filter.
 
-To implement high pass butterworth filter, in equation linked above, term in denominator should be inversed, see [this](https://www.geeksforgeeks.org/matlab-butterworth-highpass-filter-in-image-processing/).
+To implement high pass butterworth filter, in equation linked above, term in denominator should be inversed, meaning replace *D(u,v)/D_0* by *D_0/D(u,v)* (Take a look at slide 72 of **FreqDomFil.pdf**).
 
 *Try different images, cut off frequencies and order of filter. Experiment !!*

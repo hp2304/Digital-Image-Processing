@@ -6,3 +6,5 @@ gaussian/
 *.exe
 *.stackdump
 readme.txt
+temp.m
+temp.c
