@@ -9,7 +9,7 @@ Try to recover corrupted image using wiener filtering.
 * Here our input image (call it **g**) is degraded, meaning there will be some noise and some filter applied to original image.
 * Applied filter *h* is same as **Motion_blur**, average filter of size 1x21.
 * Call fourier transform of image **G** and fourier transform of filter **H**.
-* Find out left side of equation shown on slide 41 of *Restoration.pdf*. **K** in that equation is *noise to signal ratio* (**NSR**), it will taken as input. And we need to tune it to get best result.
+* Find out left side of equation shown on slide 41 of *Restoration.pdf*. **K** in that equation is *noise to signal ratio* (**NSR**), it will be taken as input. And we need to tune it to get best result.
 * Do *Inverse Fourier Transform* of above computed part to get recovered image back.
 
 ```bash
