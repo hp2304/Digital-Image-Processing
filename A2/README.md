@@ -9,7 +9,11 @@ foo@bar:~$ gcc a4.c -o a4
 foo@bar:~$ ./a4
 ```
 
-* Basically this program just stores the **histogram** of input image in *img_hist.txt* file. This text file can be opened in ImageJ as histogram and visulized. Also this histogram can be saved as image (.png, .jpg, etc) in ImageJ for visualization.
+Basically this program just stores the **histogram** of input image in *img_hist.txt* file. It can be visualized with **gnuplot** and can be exported as an image.
+
+```bash
+gnuplot> plot 'img_hist.txt' with linespoints linewidth 2
+```
 
 ## Results
 
