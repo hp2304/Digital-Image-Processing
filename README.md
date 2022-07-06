@@ -10,7 +10,7 @@
 
 - I have also included respective lecture notes in its directory. 
 
-- Optionally, I have done a few exercises in Matlab which weren't part of the assignments.
+- Optionally, I have done a few exercises in Matlab which weren't part of the assignments. Same is marked with * (asterisk sign) in the **Table of Contents** Section.
 
 ## Requirements
 
@@ -29,4 +29,4 @@
 4. [Gamma Enhancement](A4)
 5. [Contrast Improvement using Histogram Equalization](A5)
 6. [Histogram Matching](A6)
-7. 
+7. [*HAAR Transform (Matlab)](A7)
