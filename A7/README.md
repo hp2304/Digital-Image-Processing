@@ -1,4 +1,4 @@
-# HAAR Transform (MATLAB)
+# HAAR Transform (Matlab)
 
 ## Description
 * Text regarding this topic is in slides 31 to 41 of [DIP_ImageTransforms.pdf](./DIP_ImageTransforms.pdf).

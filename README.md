@@ -23,10 +23,11 @@
 
 ## Table of Contents
 
-1. [Getting started with **Histograms**](A1)
+1. [Getting started with Histograms](A1)
 2. [Image Histograms](A2)
 3. [Image Flipping](A3)
 4. [Gamma Enhancement](A4)
 5. [Contrast Improvement using Histogram Equalization](A5)
 6. [Histogram Matching](A6)
 7. [*HAAR Transform (Matlab)](A7)
+7. [*Discrete Fourier Transform (Matlab)](A8)

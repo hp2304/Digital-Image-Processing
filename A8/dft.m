@@ -11,8 +11,9 @@ img = imread('cameraman.tif');
 img = double(img);
 basis_mat = create_basis(size(img,1));
 out = basis_mat*img*basis_mat;
-% out = fftshift(out);
+out = fftshift(out);
 out = abs(out);
+figure;
 imagesc(out);
 
 figure;
