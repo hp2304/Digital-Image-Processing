@@ -15,13 +15,13 @@ void main(){
         
         char input_image[100] = "boat_512_512.raw";
         int width = 512, height = 512;
-        /*
+        
         printf("Give input image name : ");
         scanf("%s",input_image);
         printf("\nGive width and height of image : ");
         scanf("%d%d",&width,&height);
         printf("\nInput Image is %s. width : %d height : %d \n",input_image,width,height);
-        */
+       
         
         int len = findSize(height, width);
         comp (*fft)[len] = malloc(sizeof(comp[len][len]));

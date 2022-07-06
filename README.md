@@ -30,5 +30,6 @@
 5. [Contrast Improvement using Histogram Equalization](A5)
 6. [Histogram Matching](A6)
 7. [*HAAR Transform (Matlab)](A7)
-7. [*Discrete Fourier Transform (Matlab)](A8)
-8. [Discrete Fourier Transform (Naive)](A9)
+8. [*Discrete Fourier Transform (Matlab)](A8)
+9. [Discrete Fourier Transform (Naive)](A9)
+10. [Fast Fourier Transform (DFT)](A10)
