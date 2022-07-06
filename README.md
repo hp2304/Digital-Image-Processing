@@ -31,3 +31,4 @@
 6. [Histogram Matching](A6)
 7. [*HAAR Transform (Matlab)](A7)
 7. [*Discrete Fourier Transform (Matlab)](A8)
+8. [Discrete Fourier Transform (Naive)](A9)

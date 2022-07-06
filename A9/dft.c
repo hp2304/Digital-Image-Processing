@@ -73,17 +73,18 @@ void main()
                     comp temp = {0,0};
                     double s1 = ((k*i)/(double)width);
                     double s2 = ((l*j)/(double)width);
-                    temp.real = input_image[i][j]*cos(2*M_PI*(s1+s2));
+                    temp.real = input_image[i][j]*cos(2*M_PI*(s1 + s2));
                     temp.imag = input_image[i][j]*-sin(2*M_PI*(s1 + s2));
                     val.real += temp.real;
                     val.imag += temp.imag;              
                 }
             }
-            ft[k][l] = val;
+            ft[k][l].real = val.real/pow(width, 2);
+            ft[k][l].imag = val.imag/pow(width, 2);
         }
     }
     double val;
-    printf("\n\nFinding absolute values of FT...");
+    printf("\n\nFinding magnitude spectrum of FT...");
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
             val = (sqrt(pow(ft[i][j].real, 2)+pow(ft[i][j].imag, 2)));
@@ -99,7 +100,7 @@ void main()
         }
     }
 
-    printf("\n\nFinding Magnitude Spectrum of FT...");
+    printf("\n\nCentering low frequency...");
     double temp;
     for(int i=0,k=(width/2);i<(width/2),k<width;i++,k++){
         for(int j=0,l=(width/2);j<(width/2),l<width;j++,l++){

@@ -11,6 +11,8 @@
 ## Results & Discussion
 * Transformation matrix *U_nxn* or so called fourier basis matrix is created. U is unitary matrix, meaning *inverse(U) = conjugate(transpose(U))* (entris of U are complex numbers). Note, U is a square matrix.
 * Transformed Image *B = U x I x U*.
+    
+    Input image
 
     ![](../A7/cameraman.png)
 
