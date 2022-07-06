@@ -18,7 +18,7 @@
 - [ImageJ](https://imagej.nih.gov/ij/index.html)
 - Matlab (Optional)
 - pthread C library (Optional)
-- [gnuplot](http://www.gnuplot.info/) (Optional)
+- [gnuplot](http://www.gnuplot.info/)
 
 
 ## Table of Contents
@@ -28,3 +28,5 @@
 3. [Image Flipping](A3)
 4. [Gamma Enhancement](A4)
 5. [Contrast Improvement using Histogram Equalization](A5)
+6. [Histogram Matching](A6)
+7. 

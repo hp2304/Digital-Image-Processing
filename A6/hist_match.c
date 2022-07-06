@@ -107,9 +107,9 @@ int main(int argc, char* argv)
     unsigned char map[256];
     for(int i=0;i<256;i++){
         for(int j=start;j<256;j++){
-            if(list_2[j].cum_prob > list_1[i].cum_prob){
-                map[i] = j-1;
-                start = map[i];
+            if(list_2[j].cum_prob >= list_1[i].cum_prob){
+                map[i] = (list_2[j].cum_prob - list_1[i].cum_prob) < (list_1[i].cum_prob - list_2[j-1].cum_prob) ? j : j-1;
+                start = j-1;
                 break;
             }
         }
@@ -129,8 +129,8 @@ int main(int argc, char* argv)
 
     printf("\n");
     
-    for(int i=0;i<256;i++){
-        printf("%d %f %f \n", i, list_1[i].cum_prob, list_2[i].cum_prob);
-    }
+    // for(int i=0;i<256;i++){
+    //     printf("%d %f %f \n", i, list_1[i].cum_prob, list_2[i].cum_prob);
+    // }
     return 0;
 }
