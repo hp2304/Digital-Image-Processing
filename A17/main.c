@@ -13,7 +13,7 @@
 
 void main(){
 
-        char input_image[100] = "blurred_noisy.raw";
+        char input_image[100] = "degraded_256_256.raw";
         int width = 256, height = 256;
         
         printf("Give input image name : ");

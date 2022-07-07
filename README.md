@@ -39,3 +39,4 @@
 14. [Run Length Encoding](A14)
 15. [Motion Blur Removal using Fourier Transform](A15)
 16. [Adaptive Filtering](A16)
+17. [Wiener Filtering](A17)
