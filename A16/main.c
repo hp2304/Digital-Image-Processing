@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <float.h>
-#define WINDOW_SIZE 4
+#define WINDOW_SIZE 25
 
 void main(){
         
@@ -33,42 +33,37 @@ void main(){
         printf("\nEnter the variance of the noise : ");
         scanf("%lf", &noise_var);
 
-        for (int scan=0; scan<height; scan+=WINDOW_SIZE){
-                for (int pix=0; pix<width; pix+=WINDOW_SIZE){
+        for (int scan=0; scan<height; ++scan){
+                for (int pix=0; pix<width; ++pix){
                         int cnt=0;
-                        double region[WINDOW_SIZE][WINDOW_SIZE] = {0}, sum = 0;
-
-                        for(int i=0; i<WINDOW_SIZE; ++i){
-                                for(int j=0; j<WINDOW_SIZE; ++j){
-                                        if((scan+i)<height && (pix+j)<width){
-                                                region[i][j] = (double) input[scan+i][pix+j];
-                                                sum += region[i][j];
+                        double mean = 0;
+                        
+                        for(int i=-(WINDOW_SIZE/2); i<=(WINDOW_SIZE/2); ++i){
+                                for(int j=-(WINDOW_SIZE/2); j<=(WINDOW_SIZE/2); ++j){
+                                        int r = scan+i;
+                                        int c = pix+j;
+                                        if(r >= 0 && c >= 0 && r<height && c<width){
+                                                mean += input[r][c];
                                                 cnt++;
                                         }
-                                        //printf("%lf ", region[i][j]);
                                 }
-                                //printf("\n");
                         }
-                        sum /= (double)cnt;
+                        mean /= (double)cnt;
 
                         double reg_var = 0;
-                        for(int i=0; i<WINDOW_SIZE; ++i){
-                                for(int j=0; j<WINDOW_SIZE; ++j){
-                                        if((scan+i)<height && (pix+j)<width){
-                                                reg_var += pow(region[i][j] - sum, 2);
+                        for(int i=-(WINDOW_SIZE/2); i<=(WINDOW_SIZE/2); ++i){
+                                for(int j=-(WINDOW_SIZE/2); j<=(WINDOW_SIZE/2); ++j){
+                                        int r = scan+i;
+                                        int c = pix+j;
+                                        if(r >= 0 && c >= 0 && r<height && c<width){
+                                                reg_var += pow(input[r][c] - mean, 2);
                                         }
                                 }
                         }
                         reg_var /= (double)cnt;
-
-                        //printf("%lf %lf \n", sum, reg_var);
-                        for(int i=0; i<WINDOW_SIZE; ++i){
-                                for(int j=0; j<WINDOW_SIZE; ++j){
-                                        input[scan+i][pix+j] = (unsigned char)(region[i][j] - (noise_var/reg_var)*(region[i][j] - sum));
-                                        //printf("%u ", input[scan+i][pix+j]);
-                                }
-                                //printf("\n");
-                        }
+                        
+                        input[scan][pix] = (unsigned char)((double)input[scan][pix] - ((noise_var/reg_var)*(input[scan][pix] - mean)));
+                        
                 }
         }
         char out_img_name[100];

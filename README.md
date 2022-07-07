@@ -38,4 +38,4 @@
 13. [Image Upsampling using Fourier Transform](A13)
 14. [Run Length Encoding](A14)
 15. [Motion Blur Removal using Fourier Transform](A15)
-16.
+16. [Adaptive Filtering](A16)
