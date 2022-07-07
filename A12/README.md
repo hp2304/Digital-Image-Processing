@@ -1,4 +1,4 @@
-# Fast Cosine Transform: Algorithm to Compute FCT
+# Fast Cosine Transform: Algorithm to Compute DCT
 
 ## Problem Statement
 - Implement FCT (Fast Cosine Transform) algorithm to calculate Discrete Cosine Transform of input image. DCT is used heavily in **Image Compression**.

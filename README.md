@@ -35,3 +35,5 @@
 10. [Fast Fourier Transform (DFT)](A10)
 11. [Butterworth Low-Pass Filter](A11)
 12. [Fast Cosine Transform](A12)
+13. [Image Upsampling using Fourier Transform](A13)
+14. 
