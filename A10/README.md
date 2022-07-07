@@ -32,6 +32,9 @@
 * But we need to synchronize these threads before we do transpose/conjugate operations. Remember all threads are operating on different rows of *fft*(2D array) variable. So, we need to wait till all the threads have done it's work.
 * It took **<2** seconds for a **1024x1024 image (DFT + IDFT)** (My laptop has i7-7500U and 16GB RAM). This is signficantly faster than *naive* method shown in [previous assignment](../A9) and matrix multiplication method shown in [A8](../A8).
 
+    DFT + IDFT gives the original image back,
+    ![](./FFT/Threaded/boat_512_512.raw_out.jpg)
+
 
 ## Filtering
 *Now let's move to filtering part.* So when we get FFT of image, (note that *low frequencies are at center and high frequencies are at corners of our fft matrix*)
