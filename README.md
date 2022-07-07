@@ -4,7 +4,7 @@
 
 - These are the solved assignments for the course digital image processing taught at my university. I took these elective to strengthen my fundamentals in Image Processing and Computer Vision.
 
-- Mostly all assignments are implemented in **C** language as it was a requirement. Input images are **grayscale** and in **RAW** file format. RAW images can be visualized and can be converted to other well known image file formats (and vice versa) using [ImageJ](https://imagej.nih.gov/ij/index.html). To visualize the same ImageJ requires image dimensions to decode it correctly. Provided RAW images are named as such to indicate its dimensions, 
+- All assignments are implemented in **C language** as it was a course requirement. Input images are **grayscale** and in **RAW** file format. RAW images can be visualized and can be converted to other well known image file formats (and vice versa) using [ImageJ](https://imagej.nih.gov/ij/index.html). To visualize the same, ImageJ requires image dimensions to decode raw files correctly. Provided RAW images are named as such to indicate its dimensions, 
 
     *{filename}\_{width}\_{height}.raw*
 
@@ -36,4 +36,4 @@
 11. [Butterworth Low-Pass Filter](A11)
 12. [Fast Cosine Transform](A12)
 13. [Image Upsampling using Fourier Transform](A13)
-14. 
+14. [Run Length Encoding](A14)

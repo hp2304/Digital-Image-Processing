@@ -25,6 +25,7 @@ Completed...
 cam2_128_128.raw_out is created with width: 256 and height: 256
 ```
 * Enter image details, then number of padding pixels. You can enter any postive pad amount and program will pad it such that dimensions of final padded array are nearest power of 2.
+- **Note that, the upsampled image's dimensions are displayed in output and those must be used for visualization. Name of the output file doesn't indicate the image dimensions here.**
 
 ## Results
 
