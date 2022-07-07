@@ -1,7 +1,7 @@
 # Fast Fourier Transform: Algorithm to Compute DFT 
 
 ## Problem Statement
-- Implement FFT (Fast Fourier Transform) algorithm to calculate Discrete Fourier Transform of input Image.
+- Implement FFT (Fast Fourier Transform) algorithm to calculate Discrete Fourier Transform of input image.
 - [Previous assignment](../A9) implemented naive approach to calculate **DFT**.
 - Text regarding this topic is in slides 25 to 29 of [DIP_FT.pdf](../A9/DIP_FT.pdf).
 

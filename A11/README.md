@@ -5,7 +5,7 @@ Apply Butterworth Filter on an input image.
 
 
 ## Usage
-* After calculating DFT of image. Replace each entry by the equation given at slide 71 of [FreqDomFil.pdf](../A10/FreqDomFil.pdf) (Butterworth low pass filter).
+* After calculating DFT of image (as explained in [A10](../A10/)). Replace each entry by the equation given at slide 71 of [FreqDomFil.pdf](../A10/FreqDomFil.pdf) (Butterworth low pass filter).
 * Do Inverse DFT to get filtered image back.
 
     ```bash
