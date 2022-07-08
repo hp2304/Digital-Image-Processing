@@ -22,7 +22,7 @@
 
 - Transform training data to r dimensional space from m dimensional space using T. Transformed training features are called **face embeddings**. Each face image is now represented as linear combination of r eigen faces, weights being the embeddings.
 
-- read the test image, calculate its embeddings using T as explained previously.
+- Read the test image and normalize it with respect to the training set's mean and standard deviation. Calculate its embeddings using T as explained previously.
 
 - **K Nearest Neighbors (KNN)**: Find closest *k* face images, which are closest to query image's embeddings. Euclidean distance is used here as similarity metric.
 
