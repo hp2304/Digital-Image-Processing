@@ -16,7 +16,7 @@
 
 - Calculate covariance matrix **C (nxn) = data.T * data**.
 
-- Do Eigen Value Decomposition of matrix C to get **S (diagonal matrix containing Eigen values) and V (shape: nxn and its columns are Eigen vectors)** matrix. Columns of V(*nxn*) contains eigenvectors.
+- Do Eigen Value Decomposition of matrix C to get **S (diagonal matrix containing Eigen values) and V (shape: nxn and its columns are Eigen vectors)** matrix.
 
 - Select first **r** (hyperparameter and r \< n) columns of matrix V to create our transformation matrix **T** (shape *nxr*). Apply this matrix to normalized data matrix to get **Eigen faces**, which will form the new basis of feature space. 
 
