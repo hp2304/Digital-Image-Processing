@@ -26,7 +26,7 @@
 
 - **K Nearest Neighbors (KNN)**: Find closest *k* face images, which are closest to query image's embeddings. Euclidean distance is used here as similarity metric.
 
-## Usage & results
+## Usage & Results
 - run [pca.m](./pca.m) in Matlab.
 - **r: 50 & k: 5**
 
