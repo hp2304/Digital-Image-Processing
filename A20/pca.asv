@@ -1,0 +1,80 @@
+clc;close all, clear;
+
+height = 150;
+width = 150;
+
+img_cnt = 0;
+for k_indices = 1 : 15
+    dir_path = sprintf("train/%d", k_indices);
+    for file_details = dir(dir_path)'
+        if file_details.isdir == 0
+            filepath = sprintf("train/%d/%s", k_indices, file_details.name);
+            img = imread(filepath);
+            img = imresize(img, [height, width]);
+
+            img_cnt = img_cnt + 1;
+            data(:, img_cnt) = img(:);
+        end
+    end
+end
+
+data = double(data);
+
+data_norm = normalize(data, 2);
+C = (data_norm'*data_norm);
+[V,S] = eig(C);
+S = diag(flipud(diag(S)));
+V = fliplr(V);
+k = 50;
+eigen_faces = data*V(:,1:k);
+eigen_faces_norm = data_norm*V(:,1:k);
+    
+for i=1:k
+    eigen_face = reshape(eigen_faces(:,i),[height,width]);
+    subplot(5,10,i);
+    imshow(uint8(eigen_face));
+end
+waitforbuttonpress;
+close(gcf);
+train_embeddings = zeros(k, img_cnt);
+
+
+for i=1:img_cnt
+    train_embeddings(:,i) = mldivide(eigen_faces_norm, data_norm(:,i));
+    % reconstructed_img = reshape(eigen_faces*train_embeddings(:,i),[height,width]);
+    % subplot(5,3,i);
+    % imshow(uint8(reconstructed_img));
+end
+
+NN = 5;
+test_fn = input('Enter filename from test/ (0 to exit) : ', 's');
+while ~strcmp(test_fn,'0')
+    test_fp = sprintf("test/%s", test_fn);
+    test_img = imread(test_fp);
+    test_img = imresize(test_img, [height, width]);
+    test_img_v = double(test_img(:));
+
+    test_img_v_norm = (test_img_v - mean(data, 2)) ./ std(data, 0, 2);
+    test_embeddings = mldivide(eigen_faces_norm, test_img_v_norm);
+    
+
+    for j = 1:size(train_embeddings, 2)
+        dists(j) = norm(train_embeddings(:, j) - test_embeddings);
+    end
+    [k_min_dists, k_indices] = mink(dists, NN);
+    figure;
+    subplot(1, NN + 1, 1)
+    title('Query Image');
+    imshow(uint8(test_img));
+    for idx=1:NN
+        subplot(1, NN + 1, idx + 1)
+        title('#%d', );
+        imshow(uint8(reshape(data(:, k_indices), [height, width])));
+        
+    end
+    waitforbuttonpress;
+    close all;
+    
+    test_fn = input('Enter filename from test/ (0 to exit) : ', 's');
+end
+
