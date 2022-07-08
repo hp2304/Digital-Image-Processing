@@ -40,3 +40,7 @@
 15. [Motion Blur Removal using Fourier Transform](A15)
 16. [Adaptive Filtering](A16)
 17. [Wiener Filtering](A17)
+18. [Huffman Encoding](A18)
+19. [*Image Compression using SVD (Matlab)](A19)
+20. [*Face Recogntion using SVD (Matlab)](A20)
+21. [*Face Recogntion using PCA (Matlab)](A21)
