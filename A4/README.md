@@ -11,9 +11,7 @@ foo@bar:~$ ./gamma_enh
 * Gamma values greater than 1 will increase the brightness. Similarly, values lesser than 1 will reduce the brightness.
 * Try different values of gamma and observe the changes in brightness.
 
-## Results (gamma=1.5)
-![](./babyincradle_blue_663_497.jpg) ![](./babyincradle_blue_663_497.raw_out.jpg)
-
-<br/>
-
-![](./IMG_20181025_112216.jpg) ![](./input2_2800_3734.raw_out.jpg)
+## Results
+| Input Image | ![](./babyincradle_blue_663_497.jpg) | 
+|-|-|
+| Output Image (gamma=1.5) | ![](./babyincradle_blue_663_497.raw_out.jpg) |
